@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script>
+            function validate() {
+            var fname = document.forms["regform"]["fname"].value;
+            var mname = document.forms["regform"]["mname"].value;
+            var lname = document.forms["regform"]["lname"].value;
+            var month = document.forms["regform"]["month"].value;
+            var day = document.forms["regform"]["day"].value;
+            var year = document.forms["regform"]["year"].value;
+            var houseNumber = document.forms["regform"]["houseNumber"].value;
+            var street = document.forms["regform"]["street"].value;
+            var baranggay = document.forms["regform"]["baranggay"].value;
+            var city = document.forms["regform"]["city"].value;
+            var phone = document.forms["regform"]["phone"].value;
+            var tel = document.forms["regform"]["tel"].value;
+            if (fname == "" || mname == "" || lname == "" || month == "" || day == "" || year == "" || houseNumber == "" || street == "" || baranggay == "" || city == "" || phone == "" || tel == "" ) {
+                alert("Form incomplete. Please fill out all fields to successfully submit the form.");
+            return false;
+            }
+            else {alert("Thank you for filling out the form!");
+            return true;}
+            }
+        </script>
+        <form name="regform" action="/action_page.php" method="post" onsubmit="return validate()"> 
+            <h1>Registration Form</h1>
+                        <fieldset>
+                        <legend><span class="category"><b>1</b></span><i>Name</i></legend>
+                            <input type="text" id="fname" name="fname" placeholder="First Name" size="25">
+                            <input type="text" id="mname" name="mname" placeholder="Middle Name" size="25">
+                            <input type="text" id="lname" name="lname" placeholder="Last Name" size="25">
+                    </fieldset>
+                        <fieldset>
+                        <legend><span class="category"><b>2</b></span><i>Birthdate</i></legend>
+                            <select id="select" name="month">
+                                      <option value="0">Month</option>
+                                      <option value="1">January</option>
+                                      <option value="2">February</option>
+                                      <option value="3">March</option>
+                                      <option value="4">April</option>
+                                      <option value="5">May</option>
+                                      <option value="6">June</option>
+                                      <option value="7">August</option>
+                                      <option value="8">January</option>
+                                      <option value="9">September</option>
+                                      <option value="10">October</option>
+                                      <option value="11">November</option>
+                                      <option value="12">December</option>
+                            </select>
+                            <select id="select" name="day">
+                                      <option value="0">Day</option>
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                      <option value="11">11</option>
+                                      <option value="12">12</option>
+                                      <option value="13">13</option>
+                                      <option value="14">14</option>
+                                      <option value="15">15</option>
+                                      <option value="16">16</option>
+                                      <option value="17">17</option>
+                                      <option value="18">18</option>
+                                      <option value="19">19</option>
+                                      <option value="20">20</option>
+                                      <option value="21">21</option>
+                                      <option value="22">22</option>
+                                      <option value="22">23</option>
+                                      <option value="23">24</option>
+                                      <option value="24">25</option>
+                                      <option value="25">26</option>
+                                      <option value="26">27</option>
+                                      <option value="27">28</option>
+                                      <option value="28">29</option>
+                                      <option value="29">30</option>
+                                      <option value="30">31</option>
+                            </select>
+                            <input type="text" size="4" id="year" placeholder="Birthyear" name="year">
+                        </fieldset>
+                        <fieldset>
+                            <legend><span class="category"><b>3</b></span><i>Gender</i></legend>
+                            <input type="radio" id="gender" name="male" value="Male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="gender" name="female" value="Female">
+                            <label for="male">Female</label>
+                        </fieldset>
+            <fieldset>
+                <legend><span class="category"><b>4</b></span><i>Address</i></legend>
+                    <input type="text" id="houseNumber" name="houseNumber" placeholder="House Number" size="10">
+                    <input type="text" id="street" name="street" placeholder="Street" size="25">
+                    <input type="text" id="baranggay" name="baranggay" placeholder="Baranggay" size="25">
+                    <input type="text" id="city" name="city" placeholder="City" size="25">
+            </fieldset>
+            <fieldset>
+                <legend><span class="category"><b>2</b></span><i>Contact</i></legend>
+                <input type="text" id="phone" name="phone" placeholder="Cellphone Number">
+                <input type="text" id="tel" name="tel" placeholder="Telephone Number">
+            </fieldset>  
+                <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
